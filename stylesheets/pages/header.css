@@ -122,15 +122,87 @@ header {
 form {
     grid-area: search;
     border: 1px solid var(--color-blue-600);
-
     width: 516px;
     height: 40px;
+
+    display: flex;
 }
 
-.sel {
-    border-right: 1px solid var(--color-gray-100);
+/* select */
+select {
+    appearance: none;
+}
+
+.form--fieldset {
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 135px;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+}
+
+.form--fieldset select {
+    z-index: 2;
+    position: relative;
     width: 135px;
     height: 100%;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid var(--color-gray-100);
+    cursor: pointer;
+    padding-left: 12px;
+
+    color: var(--color-gray-700);
+    line-height: 120%;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.form--fieldset select:focus {
+    outline: none;
+}
+
+/* 검색 */
+.search {
+    border: none;
+    width: 301px;
+    padding-left: 10px;
+    line-height: 120%;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.search::placeholder {
+    color: var(--color-gray-600);
+}
+
+.voice,.submit {
+    width: 40px;
+    height: 100%;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+}
+
+.voice {
+    background-image: url(../../assets/icon/mic.svg);
+}
+
+.submit {
+    background-image: url(../../assets/icon/search.svg);
+}
+
+.search:focus {
+    outline: none;
 }
 
 .myCoupang {
