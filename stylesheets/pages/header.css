@@ -65,6 +65,10 @@ header {
     grid-template-areas:
         "button logo search mycoupang cart"
         "button category category mycoupang cart";
+    justify-content: center;
+    border-bottom: 1px solid var(--color-gray-100);
+
+    height: 116px;
 }
 
 /* 로고 */
@@ -79,6 +83,8 @@ header {
     grid-area: logo;
 
     position: relative;
+
+    margin: 34px 30px 10px 40px;
 }
 
 .ally-hidden {
@@ -126,6 +132,10 @@ form {
     height: 40px;
 
     display: flex;
+
+    margin-top: 34px;
+    margin-bottom: 10px;
+    margin-right: 22px;
 }
 
 /* select */
@@ -205,9 +215,51 @@ select {
     outline: none;
 }
 
+/* 마이쿠팡 */
+
 .myCoupang {
     grid-area: mycoupang;
 }
+
+.myCoupang button {
+    background-image: url(../../assets/icon/my-coupang.svg);
+    width: 90.94px;
+}
+
+
+.myCoupang button,.cart button {
+    height: 58px;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center 0;
+
+    color: var(--color-black);
+    line-height: 120%;
+    font-size: 12px;
+    font-weight: 400;
+
+    position: relative;
+
+    border: 1px solid black;
+
+    margin-top: 29px;
+}
+
+.myCoupang span {
+    position: absolute;
+    top: 40px;
+    left: 22px;
+}
+
+.myCoupang ul {
+    list-style: none;
+    
+}
+
+.myCoupang ul
+
 
 .cart {
     grid-area: cart;
