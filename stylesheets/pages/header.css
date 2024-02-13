@@ -1,9 +1,5 @@
 /* 헤더 */
 
-.wrap {
-    margin: 0 auto;
-}
-
 /* 로그인바 */
 
 #top {
@@ -14,10 +10,11 @@
 }
 
 .login-bar {
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     height: 100%;
 
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
 
     display: flex;
@@ -28,47 +25,50 @@
     line-height: 24px;
     font-weight: 400;
     color: var(--color-black);
+
+    display: flex;
+    align-items: center;
 }
 
 .left1 {
     order: 1;
-    margin-left: 8px;
+    padding-left: 8px;
 }
 
 .left2 {
     order: 2;
-    margin-left: 8px;
-    margin-right: 744px;
+    flex-grow: 1;
+    padding-left: 8px;
+    text-align: left;
 }
 
 .right1 {
     order: 3;
-    margin-right: 8px;
+    padding-right: 8px;
 }
 
 .right2 {
     order: 4;
-    margin-right: 8px;
+    padding-right: 8px;
 }
 
 .right3 {
     order: 5;
-    margin-right: 8px;
+    padding-right: 8px;
 }
 
 /* 검색 영역 */
 
 header {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 84px 32px;
     grid-template-areas:
         "button logo search mycoupang cart"
         "button category category mycoupang cart";
     justify-content: center;
-    border-bottom: 1px solid var(--color-gray-100);
 
-    height: 116px;
+    border-bottom: 1px solid var(--color-gray-100);
 }
 
 /* 로고 */
@@ -85,6 +85,8 @@ header {
     position: relative;
 
     margin: 34px 30px 10px 40px;
+
+    row-gap: 0;
 }
 
 .ally-hidden {
@@ -181,7 +183,7 @@ select {
 }
 
 /* 검색 */
-.search {
+#search {
     border: none;
     width: 301px;
     padding-left: 10px;
@@ -190,7 +192,7 @@ select {
     font-weight: 400;
 }
 
-.search::placeholder {
+#search::placeholder {
     color: var(--color-gray-600);
 }
 
@@ -212,7 +214,7 @@ select {
     background-image: url(../../assets/icon/search.svg);
 }
 
-.search:focus {
+#search:focus {
     outline: none;
 }
 
@@ -278,7 +280,7 @@ select {
 
     position: relative;
 
-    margin-top: 7px;
+    margin-top: 7.5px;
     padding-top: 24px;
     padding-bottom: 24px;
 }
@@ -340,8 +342,8 @@ select {
     align-items: center;
 
     position: absolute;
-    top: 1px;
-    left: 24.5px;
+    top: 30px;
+    left: 15px;
 
     color: var(--color-white);
     font-size: 12px;
@@ -371,7 +373,7 @@ select {
     position: absolute;
     right: 3.5px;
 
-    margin-top: 7px;
+    margin-top: 7.5px;
 }
 
 .cart--empty p::after {
@@ -400,6 +402,22 @@ select {
     right: 20px;
 }
 
+/* 카테고리 */
+
 .category {
     grid-area: category;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    margin-left: 36px;
+    padding: 0;
+    height: 26px;
+}
+
+.category li {
+    display: inline-block;
+    color: var(--color-black);
+    font-size: 12px;
+    line-height: 120%;
+    font-weight: 400;
+    padding: 6px 14px;
 }

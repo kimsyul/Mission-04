@@ -17,7 +17,7 @@
 
     <body>
         <div class="wrap">
-            <section id="top">
+            <div id="top">
                 <ul class="login-bar">
                     <li class="right1"><a href="/">로그인</a></li>
                     <li class="right2"><a href="/">회원가입</a></li>
@@ -25,7 +25,7 @@
                     <li class="left1"><a href="/">쿠팡플레이</a></li>
                     <li class="left2"><a href="">제휴마케팅</a></li>
                 </ul>
-            </section>
+            </div>
 
             <header>
                 <a class="logo" href="https://www.coupang.com/" target="_blank" rel="noopener noreferrer">
@@ -35,7 +35,7 @@
                 <button class="button--category">
                     <span>카테고리</span>
                 </button>
-                <form action="" method="get">
+                <form action="/" method="get">
                     <fieldset class="form--fieldset">
                         <select name="category">
                             <option value="total" selected>전체</option>
@@ -55,10 +55,9 @@
                     </fieldset>
 
                     <input
-                        class="search"
                         type="search"
                         name="search"
-                        id=""
+                        id="search"
                         placeholder="찾고 싶은 상품을 검색해 보세요!"
                         required />
                     <button class="voice" aria-label="음성 인식"></button>
@@ -77,11 +76,36 @@
                 <div class="cart">
                     <button>
                         <span>장바구니</span>
-                        <div>0</div>
                     </button>
+                    <div>0</div>
                     <p>장바구니에 담긴 상품이 없습니다.</p>
                 </div>
-                <ul class="category"></ul>
+                <ul class="category">
+                    <li>
+                        <a href="/">
+                            <img src="./assets/icon/icon-rocket.svg" alt="로켓배송" />
+                            <span>로켓배송</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <img src="./assets/icon/icon-fresh.svg" alt="로켓프레시" />
+                            <span>로켓프레시</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>2024년 설날</span>
+                            <img src="./assets/icon/new.svg" alt="New" />
+                        </a>
+                    </li>
+                    <li><a href="/">로켓직구</a></li>
+                    <li><a href="/">골드박스</a></li>
+                    <li><a href="/">정기배송</a></li>
+                    <li><a href="/">이벤트/쿠폰</a></li>
+                    <li><a href="/">기획전</a></li>
+                    <li><a href="/">여행티켓</a></li>
+                </ul>
             </header>
         </div>
     </body>
