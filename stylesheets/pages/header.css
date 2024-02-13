@@ -420,4 +420,5 @@ select {
     line-height: 120%;
     font-weight: 400;
     padding: 6px 14px;
+    height: 100%;
 }
